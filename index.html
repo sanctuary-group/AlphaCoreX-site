@@ -49,11 +49,10 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Concept</a>
-                        <a href="#how-it-works" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">How it Works</a>
-                        <a href="#axsi" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">AXSI Engine</a>
-                        <a href="#security" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Security</a>
-                        <a href="#fees" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Fees</a>
+                        <a href="#" class="hover:text-primary text-white px-3 py-2 rounded-md text-base font-medium transition-colors inline-flex items-center gap-1">News <i class="fa-solid fa-chevron-down text-xs opacity-60"></i></a>
+                        <a href="#" class="hover:text-primary text-white px-3 py-2 rounded-md text-base font-medium transition-colors inline-flex items-center gap-1">Analysis <i class="fa-solid fa-chevron-down text-xs opacity-60"></i></a>
+                        <a href="#" class="hover:text-primary text-white px-3 py-2 rounded-md text-base font-medium transition-colors inline-flex items-center gap-1">Guide <i class="fa-solid fa-chevron-down text-xs opacity-60"></i></a>
+                        <a href="#" class="hover:text-primary text-white px-3 py-2 rounded-md text-base font-medium transition-colors inline-flex items-center gap-1">Education <i class="fa-solid fa-chevron-down text-xs opacity-60"></i></a>
                     </div>
                 </div>
                 <div>
@@ -529,6 +528,129 @@
                 Start with AlphaCoreX
             </a>
 
+            <!-- News Section -->
+            <div class="mt-20 pt-16 border-t border-white/10 text-left max-w-5xl mx-auto">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white text-center">Explore Trending Topics</h3>
+                <p class="text-gray-400 text-center mb-8">Latest trends in the crypto &amp; blockchain industry</p>
+
+                <!-- Topic Filters -->
+                <div class="flex justify-center gap-3 mb-10 flex-wrap">
+                    <span class="topic-pill active cursor-pointer inline-block py-2 px-5 rounded-full border border-primary text-primary bg-primary/10 text-sm font-medium transition-all" data-filter="all">All</span>
+                    <span class="topic-pill cursor-pointer inline-block py-2 px-5 rounded-full border border-white/15 text-gray-400 text-sm font-medium transition-all hover:border-primary hover:text-primary" data-filter="campaign">Campaigns</span>
+                    <span class="topic-pill cursor-pointer inline-block py-2 px-5 rounded-full border border-white/15 text-gray-400 text-sm font-medium transition-all hover:border-primary hover:text-primary" data-filter="technical">Technical Analysis</span>
+                    <span class="topic-pill cursor-pointer inline-block py-2 px-5 rounded-full border border-white/15 text-gray-400 text-sm font-medium transition-all hover:border-primary hover:text-primary" data-filter="onchain">On-Chain Analysis</span>
+                    <span class="topic-pill cursor-pointer inline-block py-2 px-5 rounded-full border border-white/15 text-gray-400 text-sm font-medium transition-all hover:border-primary hover:text-primary" data-filter="regulation">Regulation & Policy</span>
+                    <span class="topic-pill cursor-pointer inline-block py-2 px-5 rounded-full border border-white/15 text-gray-400 text-sm font-medium transition-all hover:border-primary hover:text-primary" data-filter="defi">DeFi</span>
+                </div>
+
+                <!-- News Cards -->
+                <div class="space-y-0 divide-y divide-white/10" id="news-list">
+                    <article class="news-card flex gap-8 py-8" data-category="technical">
+                        <div class="flex-shrink-0 w-[280px] h-[180px] rounded-2xl bg-gray-800 flex items-center justify-center text-5xl relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-primary text-dark text-xs font-bold py-1 px-2 rounded">Technical Analysis</span>
+                            📈
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="text-primary text-sm font-medium mb-2">Seiichi Tanaka <span class="text-gray-500 ml-3">Mar 18, 2026</span></div>
+                            <h4 class="text-xl font-bold text-white mb-3 leading-relaxed hover:text-primary transition-colors"><a href="#">Bitcoin Uptrend Continues After $100K Breakout — Analysts Eye Next Resistance</a></h4>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">Major technical indicators all show bullish signals, with the next key resistance level positioned around $112,000.</p>
+                            <a href="#" class="text-primary text-sm font-bold hover:underline">More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card flex gap-8 py-8" data-category="regulation">
+                        <div class="flex-shrink-0 w-[280px] h-[180px] rounded-2xl bg-gray-800 flex items-center justify-center text-5xl relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-primary text-dark text-xs font-bold py-1 px-2 rounded">Regulation & Policy</span>
+                            🏛️
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="text-primary text-sm font-medium mb-2">Kenta Yamamoto <span class="text-gray-500 ml-3">Mar 17, 2026</span></div>
+                            <h4 class="text-xl font-bold text-white mb-3 leading-relaxed hover:text-primary transition-colors"><a href="#">Japan's FSA Announces New Crypto Regulatory Framework — What It Means for the Industry</a></h4>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">The new regulations aim to strengthen investor protection while maintaining a balance that promotes innovation.</p>
+                            <a href="#" class="text-primary text-sm font-bold hover:underline">More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card flex gap-8 py-8" data-category="onchain">
+                        <div class="flex-shrink-0 w-[280px] h-[180px] rounded-2xl bg-gray-800 flex items-center justify-center text-5xl relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-primary text-dark text-xs font-bold py-1 px-2 rounded">On-Chain Analysis</span>
+                            🔗
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="text-primary text-sm font-medium mb-2">Misaki Sato <span class="text-gray-500 ml-3">Mar 16, 2026</span></div>
+                            <h4 class="text-xl font-bold text-white mb-3 leading-relaxed hover:text-primary transition-colors"><a href="#">Ethereum's Next Upgrade "Osaka" Revealed — Full Details on Scalability Improvements</a></h4>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">Following Dencun, this major upgrade is expected to reduce L2 gas costs and improve validator efficiency.</p>
+                            <a href="#" class="text-primary text-sm font-bold hover:underline">More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card flex gap-8 py-8" data-category="defi">
+                        <div class="flex-shrink-0 w-[280px] h-[180px] rounded-2xl bg-gray-800 flex items-center justify-center text-5xl relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-primary text-dark text-xs font-bold py-1 px-2 rounded">DeFi</span>
+                            💰
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="text-primary text-sm font-medium mb-2">Misaki Sato <span class="text-gray-500 ml-3">Mar 15, 2026</span></div>
+                            <h4 class="text-xl font-bold text-white mb-3 leading-relaxed hover:text-primary transition-colors"><a href="#">DeFi TVL Hits All-Time High — Analyzing the Growth Drivers Behind Major Protocols</a></h4>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">Led by Aave, Lido, and MakerDAO, DeFi's total value locked has surpassed $200 billion.</p>
+                            <a href="#" class="text-primary text-sm font-bold hover:underline">More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card flex gap-8 py-8" data-category="campaign">
+                        <div class="flex-shrink-0 w-[280px] h-[180px] rounded-2xl bg-gray-800 flex items-center justify-center text-5xl relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-primary text-dark text-xs font-bold py-1 px-2 rounded">Campaigns</span>
+                            🎁
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="text-primary text-sm font-medium mb-2">Seiichi Tanaka <span class="text-gray-500 ml-3">Mar 14, 2026</span></div>
+                            <h4 class="text-xl font-bold text-white mb-3 leading-relaxed hover:text-primary transition-colors"><a href="#">Spring Sign-Up Campaign — 30 Days Zero Trading Fees & Up to $500 BTC Bonus</a></h4>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">A limited-time special campaign offering generous rewards for new account openings and first deposits.</p>
+                            <a href="#" class="text-primary text-sm font-bold hover:underline">More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card flex gap-8 py-8" data-category="technical">
+                        <div class="flex-shrink-0 w-[280px] h-[180px] rounded-2xl bg-gray-800 flex items-center justify-center text-5xl relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-primary text-dark text-xs font-bold py-1 px-2 rounded">Technical Analysis</span>
+                            📊
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="text-primary text-sm font-medium mb-2">Seiichi Tanaka <span class="text-gray-500 ml-3">Mar 13, 2026</span></div>
+                            <h4 class="text-xl font-bold text-white mb-3 leading-relaxed hover:text-primary transition-colors"><a href="#">ETH/BTC Ratio Hits Key Support — Reading the Signs of an Altcoin Season</a></h4>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">The ETH/BTC ratio bounced off support near 0.03. Analyzing historical patterns for potential altcoin upside.</p>
+                            <a href="#" class="text-primary text-sm font-bold hover:underline">More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Writers Section -->
+            <div class="mt-20 pt-16 border-t border-white/10 max-w-4xl mx-auto">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white text-center">Our Writers</h3>
+                <p class="text-gray-400 text-center mb-10">An industry-leading team of experts</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex gap-5 items-start">
+                        <div class="flex-shrink-0 w-[120px] h-[120px] rounded-xl bg-primary flex items-center justify-center text-4xl font-bold text-dark">ST</div>
+                        <div class="flex flex-col justify-start pt-1">
+                            <h4 class="text-lg font-bold text-white mb-1">Seiichi Tanaka</h4>
+                            <div class="text-primary text-sm font-bold mb-2">Chief Analyst</div>
+                            <p class="text-gray-400 text-sm leading-relaxed">Former trader at a major securities firm. Over 10 years of crypto market analysis experience, specializing in technical analysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5 items-start">
+                        <div class="flex-shrink-0 w-[120px] h-[120px] rounded-xl bg-primary flex items-center justify-center text-4xl font-bold text-dark">MS</div>
+                        <div class="flex flex-col justify-start pt-1">
+                            <h4 class="text-lg font-bold text-white mb-1">Misaki Sato</h4>
+                            <div class="text-primary text-sm font-bold mb-2">DeFi Researcher</div>
+                            <p class="text-gray-400 text-sm leading-relaxed">Former smart contract developer. Specializes in technical analysis of DeFi protocols and investment risk assessment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm">
                 <p>&copy; 2026 AlphaCoreX. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
@@ -541,5 +663,28 @@
         </div>
     </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const pills = document.querySelectorAll('.topic-pill');
+    const cards = document.querySelectorAll('.news-card');
+
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            pills.forEach(p => {
+                p.classList.remove('active');
+                p.classList.remove('border-primary', 'text-primary', 'bg-primary/10');
+                p.classList.add('border-white/15', 'text-gray-400');
+            });
+            pill.classList.add('active', 'border-primary', 'text-primary', 'bg-primary/10');
+            pill.classList.remove('border-white/15', 'text-gray-400');
+
+            const filter = pill.dataset.filter;
+            cards.forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>
