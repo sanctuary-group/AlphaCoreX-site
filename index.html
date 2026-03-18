@@ -1,272 +1,545 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DARKEX ACADEMY - 暗号資産の学びを、すべての人に</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaCoreX | Next-Gen AI-Selected Bucket Vault</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#030712',
+                        card: 'rgba(17, 24, 39, 0.7)',
+                        primary: '#00f2fe',
+                        secondary: '#4facfe',
+                        accent: '#818cf8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #00f2fe33 0deg, #4facfe33 180deg, #00f2fe33 360deg)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-dark antialiased bg-grid relative">
 
-<!-- ========== Header ========== -->
-<header class="header">
-  <div class="container">
-    <!-- ロゴ（SVGアイコン + テキスト2行） -->
-    <a href="#" class="header-logo">AlphaCoreX</a>
-
-    <!-- ナビ（4項目） -->
-    <nav class="header-nav">
-      <a href="#news" class="nav-dropdown">ニュース</a>
-      <a href="#" class="nav-dropdown">分析</a>
-      <a href="#writers" class="nav-dropdown">教育</a>
-      <a href="#">ガイド</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-card border-b-0 border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <span class="font-display font-bold text-2xl tracking-wider text-white">AlphaCore<span class="text-primary">X</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Concept</a>
+                        <a href="#how-it-works" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">How it Works</a>
+                        <a href="#axsi" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">AXSI Engine</a>
+                        <a href="#security" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Security</a>
+                        <a href="#fees" class="hover:text-primary text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Fees</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-dark font-bold py-2 px-6 rounded-full transition-all shadow-[0_0_15px_rgba(0,242,254,0.4)]">Launch App</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-  </div>
-</header>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-screen">
+        <div class="glow-effect top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full glass-card text-primary text-sm font-semibold mb-6 border-primary/20 border">
+                Built on Hyperliquid • 100% On-Chain
+            </span>
+            <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight mb-8 leading-tight">
+                Next-Gen AI-Selected<br>
+                <span class="text-gradient">Bucket Vault</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                Only elite traders chosen by numbers, not emotion, manage your assets.<br>
+                A revolutionary copy trading experience built on structure, not single-trader reliance.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#how-it-works" class="bg-white text-dark hover:bg-gray-200 font-bold py-4 px-8 rounded-full transition-all text-lg">
+                    How it Works
+                </a>
+                <a href="#" class="glass-card hover:bg-white/5 text-white font-bold py-4 px-8 rounded-full transition-all text-lg border border-white/10 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wallet"></i> Deposit to Vault (Mock)
+                </a>
+            </div>
 
-<!-- ========== ① LP Section ========== -->
-
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <h1>暗号資産の<span class="accent">最前線</span>を、<br>あなたの手に。</h1>
-    <p>業界トップクラスのアナリストとライターが届ける、信頼性の高いニュース・分析・教育コンテンツ。初心者からプロまで、すべての投資家のために。</p>
-    <a href="#" class="btn-primary">無料で購読する</a>
-  </div>
-</section>
-
-<!-- Features -->
-<section class="features">
-  <div class="container">
-    <h2 class="section-title">選ばれる3つの理由</h2>
-    <p class="section-subtitle">DARKEX ACADEMYが多くの投資家に支持される理由</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>速報性</h3>
-        <p>24時間体制で世界中のマーケット情報をリアルタイムにお届け。重要なニュースを見逃しません。</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>専門的な分析</h3>
-        <p>経験豊富なアナリストによるテクニカル・ファンダメンタル分析で、投資判断をサポートします。</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎓</div>
-        <h3>体系的な教育</h3>
-        <p>ブロックチェーンの基礎からDeFi・NFTまで、段階的に学べる教育コンテンツを提供します。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Stats -->
-<section class="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="number">500K+</div>
-        <div class="label">月間読者数</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">10,000+</div>
-        <div class="label">公開記事数</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">50+</div>
-        <div class="label">専門ライター</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">98%</div>
-        <div class="label">読者満足度</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Banner -->
-<section class="cta-banner">
-  <div class="container">
-    <h2>最新の暗号資産ニュースを受け取ろう</h2>
-    <p>メールアドレスを登録するだけで、毎日の重要ニュースをお届けします。</p>
-    <a href="#" class="btn-primary">今すぐ登録</a>
-  </div>
-</section>
-
-<!-- ========== ② News Section ========== -->
-<section class="news" id="news">
-  <div class="container">
-    <div class="news-header">
-      <h2 class="section-title">Explore Trending Topics</h2>
-      <p class="section-subtitle">暗号資産・ブロックチェーン業界の最新動向</p>
-    </div>
-
-    <div class="topic-filters">
-      <span class="topic-pill active" data-filter="all">すべて</span>
-      <span class="topic-pill" data-filter="campaign">キャンペーン</span>
-      <span class="topic-pill" data-filter="technical">テクニカル分析</span>
-      <span class="topic-pill" data-filter="onchain">オンチェーン分析</span>
-      <span class="topic-pill" data-filter="regulation">規制・政策</span>
-      <span class="topic-pill" data-filter="defi">DeFi</span>
-    </div>
-
-    <div class="news-layout">
-      <div class="news-list">
-
-        <article class="news-card" data-category="technical">
-          <div class="news-thumb">
-            <span class="news-tag">テクニカル分析</span>
-            📈
-          </div>
-          <div class="news-body">
-            <div class="news-author">田中 誠一 <span class="news-date">2026年3月18日</span></div>
-            <h3><a href="#">ビットコイン、10万ドル突破後も上昇トレンド継続か──アナリストが見る次の抵抗線</a></h3>
-            <p class="news-desc">主要テクニカル指標はいずれも強気シグナルを示しており、次の重要な抵抗線は$112,000付近に位置する。</p>
-            <a href="#" class="news-more">More →</a>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="regulation">
-          <div class="news-thumb">
-            <span class="news-tag">規制・政策</span>
-            🏛️
-          </div>
-          <div class="news-body">
-            <div class="news-author">山本 健太 <span class="news-date">2026年3月17日</span></div>
-            <h3><a href="#">日本金融庁、暗号資産規制の新フレームワークを発表──業界への影響は</a></h3>
-            <p class="news-desc">新規制は投資家保護を強化しつつ、イノベーション促進のバランスを重視する内容となっている。</p>
-            <a href="#" class="news-more">More →</a>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="onchain">
-          <div class="news-thumb">
-            <span class="news-tag">オンチェーン分析</span>
-            🔗
-          </div>
-          <div class="news-body">
-            <div class="news-author">佐藤 美咲 <span class="news-date">2026年3月16日</span></div>
-            <h3><a href="#">イーサリアム次期アップグレード「Osaka」の全貌──スケーラビリティ改善の詳細</a></h3>
-            <p class="news-desc">Dencunに続く大型アップグレードで、L2のガスコスト削減とバリデーター効率の改善が見込まれる。</p>
-            <a href="#" class="news-more">More →</a>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="defi">
-          <div class="news-thumb">
-            <span class="news-tag">DeFi</span>
-            💰
-          </div>
-          <div class="news-body">
-            <div class="news-author">佐藤 美咲 <span class="news-date">2026年3月15日</span></div>
-            <h3><a href="#">DeFi TVL、過去最高を更新──主要プロトコルの成長要因を分析</a></h3>
-            <p class="news-desc">Aave、Lido、MakerDAOが牽引し、DeFiの総ロック額が2,000億ドルを突破した。</p>
-            <a href="#" class="news-more">More →</a>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="campaign">
-          <div class="news-thumb">
-            <span class="news-tag">キャンペーン</span>
-            🎁
-          </div>
-          <div class="news-body">
-            <div class="news-author">田中 誠一 <span class="news-date">2026年3月14日</span></div>
-            <h3><a href="#">春の新規登録キャンペーン開催中──取引手数料30日間無料＆最大5万円相当のBTCプレゼント</a></h3>
-            <p class="news-desc">期間限定の特別キャンペーン。新規口座開設＆初回入金で豪華特典が受けられる。</p>
-            <a href="#" class="news-more">More →</a>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="technical">
-          <div class="news-thumb">
-            <span class="news-tag">テクニカル分析</span>
-            📊
-          </div>
-          <div class="news-body">
-            <div class="news-author">田中 誠一 <span class="news-date">2026年3月13日</span></div>
-            <h3><a href="#">ETH/BTC比率が重要サポートに到達──アルトコインシーズンの兆候を読む</a></h3>
-            <p class="news-desc">ETH/BTC比率が0.03付近のサポートで反発。過去のパターンからアルトコイン上昇の可能性を分析。</p>
-            <a href="#" class="news-more">More →</a>
-          </div>
-        </article>
-
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
-<!-- ========== ③ Writers Section ========== -->
-<section class="writers" id="writers">
-  <div class="container">
-    <h2 class="section-title">ライター紹介</h2>
-    <p class="section-subtitle">業界をリードする専門家チーム</p>
-    <div class="writers-grid">
-
-      <div class="writer-card">
-        <div class="writer-avatar">田</div>
-        <div class="writer-info">
-          <h3>田中 誠一</h3>
-          <div class="title">チーフアナリスト</div>
-          <p>元大手証券会社トレーダー。10年以上の暗号資産市場分析経験を持ち、テクニカル分析を得意とする。</p>
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 pt-10">
+                <div class="text-center">
+                    <div class="text-3xl font-display font-bold text-white mb-1">$30B+</div>
+                    <div class="text-sm text-gray-500">Hyperliquid Daily Vol</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-display font-bold text-white mb-1">100%</div>
+                    <div class="text-sm text-gray-500">On-Chain Transparency</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-display font-bold text-white mb-1">5 Traders</div>
+                    <div class="text-sm text-gray-500">Diversified Bucket</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-display font-bold text-white mb-1">0 Fixed</div>
+                    <div class="text-sm text-gray-500">Performance Fee Only</div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="writer-card">
-        <div class="writer-avatar">佐</div>
-        <div class="writer-info">
-          <h3>佐藤 美咲</h3>
-          <div class="title">DeFiリサーチャー</div>
-          <p>スマートコントラクト開発者出身。DeFiプロトコルの技術的分析と投資リスク評価を専門とする。</p>
+    <!-- Problem & Solution -->
+    <section id="about" class="py-24 relative bg-gray-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Solving the Biggest Flaw in<br>Copy Trading</h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        Traditional DeFi copy trading suffers from an extreme <strong class="text-white">single trader dependency risk</strong>. Investors constantly trade in fear, waiting for the moment their chosen trader blows up.
+                    </p>
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
+                        <h3 class="text-xl font-bold text-white mb-3">The AlphaCoreX Solution</h3>
+                        <p class="text-gray-300">
+                            We construct a <strong>Bucket Vault</strong> combining 5 elite Hyperliquid traders screened through strict quantitative metrics and grouped by low correlation. If one stumbles, the overall portfolio damage is minimized.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-link-slash text-4xl text-primary mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">Correlation Control</h4>
+                        <p class="text-sm text-gray-400">Eliminates traders moving in the same direction to diversify risk.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-robot text-4xl text-primary mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">AI Quantitative Scoring</h4>
+                        <p class="text-sm text-gray-400">Evaluated purely on 180 days of on-chain data, not emotion or hype.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-cubes text-4xl text-primary mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">5-Trader Bucket</h4>
+                        <p class="text-sm text-gray-400">A robust portfolio diversifying strategies, time horizons, and assets.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-magnifying-glass-chart text-4xl text-primary mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">Monthly Automated Audit</h4>
+                        <p class="text-sm text-gray-400">Continuous monthly reviews; underperformers are auto-replaced.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-24 relative">
+        <div class="glow-effect top-0 right-0 w-[400px] h-[400px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Incredibly Simple Experience</h2>
+                <p class="text-xl text-gray-400">Fully automated on-chain operations. No complex setups required.</p>
+            </div>
 
-<!-- ========== Footer ========== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-logo">DARKEX <span>ACADEMY</span></div>
-      <div class="footer-links">
-        <a href="#">ニュース</a>
-        <a href="#">分析</a>
-        <a href="#">ガイド</a>
-        <a href="#">教育</a>
-        <a href="#">会社概要</a>
-        <a href="#">お問い合わせ</a>
-        <a href="#">プライバシーポリシー</a>
-        <a href="#">利用規約</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2026 DARKEX ACADEMY. All rights reserved.
-    </div>
-  </div>
-</footer>
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Connecting Line (PC) -->
+                <div class="hidden md:block absolute top-1/2 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent -translate-y-1/2 z-0"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const pills = document.querySelectorAll('.topic-pill');
-  const cards = document.querySelectorAll('.news-card');
+                <div class="glass-card p-10 rounded-3xl text-center relative z-10">
+                    <div class="w-20 h-20 mx-auto bg-dark rounded-full flex items-center justify-center border-2 border-primary mb-6 shadow-[0_0_20px_rgba(0,242,254,0.3)]">
+                        <span class="text-2xl font-display font-bold text-primary">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Deposit</h3>
+                    <p class="text-gray-400">Deposit USDC into the AlphaCoreX Vault. No initial setup or manual trader selection is required.</p>
+                </div>
 
-  pills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      pills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
+                <div class="glass-card p-10 rounded-3xl text-center relative z-10">
+                    <div class="w-20 h-20 mx-auto bg-dark rounded-full flex items-center justify-center border-2 border-primary mb-6 shadow-[0_0_20px_rgba(0,242,254,0.3)]">
+                        <span class="text-2xl font-display font-bold text-primary">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Wait</h3>
+                    <p class="text-gray-400">Strategies from 5 AI-selected elite traders are automatically copied, putting your assets to work.</p>
+                </div>
 
-      const filter = pill.dataset.filter;
-      cards.forEach(card => {
-        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
-      });
-    });
-  });
-});
-</script>
+                <div class="glass-card p-10 rounded-3xl text-center relative z-10">
+                    <div class="w-20 h-20 mx-auto bg-dark rounded-full flex items-center justify-center border-2 border-primary mb-6 shadow-[0_0_20px_rgba(0,242,254,0.3)]">
+                        <span class="text-2xl font-display font-bold text-primary">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Withdraw</h3>
+                    <p class="text-gray-400">No lock-up periods. Withdraw your funds and profits at any time you choose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AXSI Engine Section -->
+    <section id="axsi" class="py-24 bg-gray-900/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Alpha Cross-Signal Intelligence</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 font-display">The AXSI Engine</h2>
+                <p class="text-xl text-gray-400">
+                    Retrieves all on-chain data from Hyperliquid and analyzes 180 days of trading history using our proprietary algorithm.<br>
+                    <strong class="text-white">"Only numbers decide."</strong> A ruthless, objective screening system.
+                </p>
+            </div>
+
+            <!-- AXSI Definition Box -->
+            <div class="glass-card rounded-2xl p-8 mb-16 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 text-center text-white">Exclusive Trader Evaluation Engine</h3>
+                <p class="text-gray-300 text-center mb-8">
+                    AXSI retrieves complete on-chain data from Hyperliquid and <strong>analyzes 180 days of granular trading history</strong> using our proprietary algorithm to evaluate traders for the AlphaCoreX Vault.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="border border-red-500/30 bg-red-500/5 rounded-xl p-6">
+                        <h4 class="text-red-400 font-bold mb-4 flex items-center"><i class="fa-solid fa-xmark mr-2 text-xl"></i>What We DON'T Evaluate</h4>
+                        <ul class="space-y-3 text-gray-400">
+                            <li><i class="fa-solid fa-minus text-red-500/50 mr-2"></i>Intuition or "Gut Feeling"</li>
+                            <li><i class="fa-solid fa-minus text-red-500/50 mr-2"></i>Social Reputation</li>
+                            <li><i class="fa-solid fa-minus text-red-500/50 mr-2"></i>Follower Count</li>
+                        </ul>
+                    </div>
+                    <div class="border border-primary/30 bg-primary/5 rounded-xl p-6">
+                        <h4 class="text-primary font-bold mb-4 flex items-center"><i class="fa-solid fa-check mr-2 text-xl"></i>What We DO Evaluate</h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li><i class="fa-solid fa-plus text-primary/50 mr-2"></i>Cold, Hard Numbers</li>
+                            <li><i class="fa-solid fa-plus text-primary/50 mr-2"></i>On-Chain Track Record</li>
+                            <li><i class="fa-solid fa-plus text-primary/50 mr-2"></i>Reproducibility & Stability</li>
+                            <li><i class="fa-solid fa-plus text-primary/50 mr-2"></i>Strict Risk Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hard Filters -->
+            <h3 class="text-2xl font-bold mb-8 text-center text-white">The "6 Hard Filter Gates" Applied to the Top 300</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="glass-card p-6 rounded-xl border-t-2 border-t-red-500/50">
+                    <div class="text-red-400 text-sm font-bold mb-2">GATE 1</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Win Rate > 55%</h4>
+                    <p class="text-sm text-gray-400">Significantly above industry average (42%). Approx. 40% fail here.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-t-2 border-t-orange-500/50">
+                    <div class="text-orange-400 text-sm font-bold mb-2">GATE 2</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Max Drawdown < -15%</h4>
+                    <p class="text-sm text-gray-400">The toughest barrier for loss tolerance. 61% are eliminated.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-t-2 border-t-yellow-500/50">
+                    <div class="text-yellow-400 text-sm font-bold mb-2">GATE 3</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Sharpe Ratio > 1.5</h4>
+                    <p class="text-sm text-gray-400">Proof of consistent risk-adjusted returns. Only the top 12% pass.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-t-2 border-t-green-500/50">
+                    <div class="text-green-400 text-sm font-bold mb-2">GATE 4</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Avg Leverage < 5x</h4>
+                    <p class="text-sm text-gray-400">Strict risk control. Completely eliminates high-leverage gamblers.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-t-2 border-t-blue-500/50">
+                    <div class="text-blue-400 text-sm font-bold mb-2">GATE 5</div>
+                    <h4 class="text-xl font-bold text-white mb-2">180+ Days Track Record</h4>
+                    <p class="text-sm text-gray-400">Removes short-term luck. 6+ months of on-chain results are mandatory.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-t-2 border-t-purple-500/50">
+                    <div class="text-purple-400 text-sm font-bold mb-2">GATE 6</div>
+                    <h4 class="text-xl font-bold text-white mb-2">< 2 Consecutive Loss Months</h4>
+                    <p class="text-sm text-gray-400">Two straight loss months signals a broken strategy. Consistency is key.</p>
+                </div>
+            </div>
+
+            <!-- Scoring & Pass Rate -->
+            <div class="glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-50"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-left md:w-1/2">
+                        <h3 class="text-3xl font-bold mb-4 text-white">Only a 3-8% Pass Rate</h3>
+                        <p class="text-gray-300 mb-6">Traders who clear all gates are further scored out of 100 points (Sharpe Ratio 30%, Win Rate 25%, Max DD 25%, Avg Lev 20%).</p>
+                        <div class="inline-block bg-dark/50 border border-primary/30 rounded-lg p-4">
+                            <h4 class="text-primary font-bold mb-2"><i class="fa-solid fa-triangle-exclamation"></i> Mandatory Correlation Rule</h4>
+                            <p class="text-sm text-gray-300">Even with high scores, if candidates have a correlation <strong class="text-white">above 0.7</strong> with others, they are rejected. This prevents simultaneous wipeouts.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="w-48 h-48 rounded-full border-8 border-dark relative flex items-center justify-center bg-card shadow-[0_0_30px_rgba(0,242,254,0.3)]">
+                            <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="46" fill="transparent" stroke="#1f2937" stroke-width="8"></circle>
+                                <circle cx="50" cy="50" r="46" fill="transparent" stroke="#00f2fe" stroke-width="8" stroke-dasharray="289" stroke-dashoffset="270"></circle>
+                            </svg>
+                            <div class="text-center">
+                                <span class="text-4xl font-display font-bold text-white">5</span>
+                                <div class="text-xs text-gray-400 mt-1">Final Selection</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bucket Structure -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Conservative 5-Trader Bucket</h2>
+            <div class="grid lg:grid-cols-5 gap-4">
+                <div class="glass-card p-6 rounded-2xl text-center border-t-4 border-t-blue-500">
+                    <div class="text-3xl font-display font-bold text-blue-400 mb-2">30%</div>
+                    <h4 class="font-bold text-white mb-4 border-b border-white/10 pb-2">Trader A</h4>
+                    <ul class="text-sm text-gray-400 space-y-2 text-left">
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>BTC Heavy</li>
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Swing Trades</li>
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Long Neutral</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-t-4 border-t-cyan-500">
+                    <div class="text-3xl font-display font-bold text-cyan-400 mb-2">25%</div>
+                    <h4 class="font-bold text-white mb-4 border-b border-white/10 pb-2">Trader B</h4>
+                    <ul class="text-sm text-gray-400 space-y-2 text-left">
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Low Frequency</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Min Drawdown</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>High Defense</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-t-4 border-t-teal-500">
+                    <div class="text-3xl font-display font-bold text-teal-400 mb-2">20%</div>
+                    <h4 class="font-bold text-white mb-4 border-b border-white/10 pb-2">Trader C</h4>
+                    <ul class="text-sm text-gray-400 space-y-2 text-left">
+                        <li><i class="fa-solid fa-check text-teal-400 mr-2"></i>Multi-Asset</li>
+                        <li><i class="fa-solid fa-check text-teal-400 mr-2"></i>Neutral Strat</li>
+                        <li><i class="fa-solid fa-check text-teal-400 mr-2"></i>Market Agnostic</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-t-4 border-t-green-500">
+                    <div class="text-3xl font-display font-bold text-green-400 mb-2">15%</div>
+                    <h4 class="font-bold text-white mb-4 border-b border-white/10 pb-2">Trader D</h4>
+                    <ul class="text-sm text-gray-400 space-y-2 text-left">
+                        <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Scalper</li>
+                        <li><i class="fa-solid fa-check text-green-400 mr-2"></i>High Win-Rate</li>
+                        <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Short-Term Gains</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-t-4 border-t-red-500">
+                    <div class="text-3xl font-display font-bold text-red-400 mb-2">10%</div>
+                    <h4 class="font-bold text-white mb-4 border-b border-white/10 pb-2">Trader E</h4>
+                    <ul class="text-sm text-gray-400 space-y-2 text-left">
+                        <li><i class="fa-solid fa-check text-red-400 mr-2"></i>Short Specialist</li>
+                        <li><i class="fa-solid fa-check text-red-400 mr-2"></i>Hedge Function</li>
+                        <li><i class="fa-solid fa-check text-red-400 mr-2"></i>Bear Market Ready</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center mt-8 text-gray-400 italic">Diversifying direction, timeframe, and assets to minimize overall portfolio damage.</p>
+        </div>
+    </section>
+
+    <!-- Security & Monitoring -->
+    <section id="security" class="py-24 bg-gray-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">AXSI Anomaly Detection</h2>
+                <p class="text-xl text-gray-400">
+                    Selection is not the end. AXSI is constantly <strong>"preparing for expulsion."</strong><br>
+                    Four monitoring layers run 24/7/365, reacting before users even notice an issue.
+                </p>
+            </div>
+
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <!-- Layer 1 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-center border-l-4 border-l-red-500">
+                    <div class="md:w-1/4 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+                        <div class="text-red-400 font-display font-bold text-xl mb-1">LAYER 1</div>
+                        <h4 class="text-white font-bold">Real-Time Monitor</h4>
+                        <span class="text-xs bg-red-500/20 text-red-300 py-1 px-2 rounded mt-2 inline-block">Expulsion within 24h</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-gray-300 text-sm md:text-base">
+                            <strong>Triggers:</strong> Sudden leverage spikes (e.g., normal 5x jumps to >10x), daily loss exceeding -10%, massive unusual orders, sudden entry into unknown assets.<br>
+                            <span class="text-gray-500 mt-2 block">Action: Instantly cuts off panic trading, gambling, or strategy deviations.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Layer 2 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-center border-l-4 border-l-orange-500">
+                    <div class="md:w-1/4 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+                        <div class="text-orange-400 font-display font-bold text-xl mb-1">LAYER 2</div>
+                        <h4 class="text-white font-bold">Daily Check</h4>
+                        <span class="text-xs bg-orange-500/20 text-orange-300 py-1 px-2 rounded mt-2 inline-block">Review within 48h</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-gray-300 text-sm md:text-base">
+                            <strong>Triggers:</strong> Executed daily at UTC 0:00. Position size doubles vs. last week, extreme changes in trade frequency (5x or total stop), drastic style changes.<br>
+                            <span class="text-gray-500 mt-2 block">Action: Flags generated for manual evaluation team review.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Layer 3 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-center border-l-4 border-l-yellow-500">
+                    <div class="md:w-1/4 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+                        <div class="text-yellow-400 font-display font-bold text-xl mb-1">LAYER 3</div>
+                        <h4 class="text-white font-bold">Weekly Review</h4>
+                        <span class="text-xs bg-yellow-500/20 text-yellow-300 py-1 px-2 rounded mt-2 inline-block">Observation Mode</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-gray-300 text-sm md:text-base">
+                            <strong>Triggers:</strong> Executed every Monday. Win rate drops <50% for 3 consecutive weeks, internal correlation exceeds 0.7, degrading Sharpe Ratio.<br>
+                            <span class="text-gray-500 mt-2 block">Action: Initiates expulsion process if not resolved within 2 weeks.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Layer 4 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-center border-l-4 border-l-primary">
+                    <div class="md:w-1/4 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+                        <div class="text-primary font-display font-bold text-xl mb-1">LAYER 4</div>
+                        <h4 class="text-white font-bold">Monthly Audit</h4>
+                        <span class="text-xs bg-primary/20 text-primary py-1 px-2 rounded mt-2 inline-block">Full Recalculation</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-gray-300 text-sm md:text-base">
+                            <strong>Triggers:</strong> 30 days of inactivity, Monthly DD exceeds -20%, AXSI score drops below threshold.<br>
+                            <span class="text-gray-500 mt-2 block">Action: Immediate expulsion and automated replacement from the waitlist (minimizing user impact).</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-Expulsion Flow -->
+            <div class="mt-16 glass-card p-8 rounded-2xl border border-white/10 relative overflow-hidden max-w-5xl mx-auto">
+                <div class="absolute top-0 right-0 bg-primary text-dark font-bold text-xs py-1 px-3 rounded-bl-lg">Continuity Mechanism</div>
+                <h3 class="text-2xl font-bold mb-8 text-center text-white">Post-Expulsion Recovery Flow</h3>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 relative">
+                    <!-- Connecting Line (PC) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-primary to-primary -translate-y-1/2 z-0 opacity-50"></div>
+
+                    <div class="z-10 bg-dark border border-white/10 rounded-xl p-4 w-full md:w-1/5 text-center">
+                        <div class="text-red-400 mb-2"><i class="fa-solid fa-triangle-exclamation text-2xl"></i></div>
+                        <div class="text-sm font-bold text-white">1. Anomaly<br>& Expulsion</div>
+                    </div>
+                    <div class="z-10 bg-dark border border-white/10 rounded-xl p-4 w-full md:w-1/5 text-center">
+                        <div class="text-gray-400 mb-2"><i class="fa-solid fa-list-check text-2xl"></i></div>
+                        <div class="text-sm font-bold text-white">2. Auto-Select<br>From Waitlist</div>
+                    </div>
+                    <div class="z-10 bg-dark border border-white/10 rounded-xl p-4 w-full md:w-1/5 text-center">
+                        <div class="text-gray-400 mb-2"><i class="fa-solid fa-link-slash text-2xl"></i></div>
+                        <div class="text-sm font-bold text-white">3. Re-verify<br>Correlation</div>
+                    </div>
+                    <div class="z-10 bg-dark border border-primary/50 rounded-xl p-4 w-full md:w-1/5 text-center shadow-[0_0_15px_rgba(0,242,254,0.2)]">
+                        <div class="text-primary mb-2"><i class="fa-solid fa-rotate text-2xl"></i></div>
+                        <div class="text-sm font-bold text-white">4. Replenished<br>Within 24h</div>
+                    </div>
+                    <div class="z-10 bg-dark border border-white/10 rounded-xl p-4 w-full md:w-1/5 text-center">
+                        <div class="text-gray-400 mb-2"><i class="fa-solid fa-cubes text-2xl"></i></div>
+                        <div class="text-sm font-bold text-white">5. All Logs<br>Recorded On-Chain</div>
+                    </div>
+                </div>
+                <p class="text-center mt-6 text-sm text-gray-400">* Designed to aim for zero impact on user assets. Vault operations continue seamlessly with the remaining 4 traders during the transition.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Fees & Trust -->
+    <section id="fees" class="py-24 relative overflow-hidden">
+        <div class="glow-effect bottom-0 left-0 w-[500px] h-[500px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Pure Performance-Based Fees</h2>
+                    <p class="text-xl text-gray-400 mb-8">
+                        We charge absolutely zero upfront or monthly fixed fees.<br>A clean structure where fees are applied <strong class="text-white">only when you make a profit</strong>.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-white/10 py-3">
+                            <span class="text-gray-300 text-lg">Deposit Fee</span>
+                            <span class="font-bold text-white text-xl">Free (0%)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/10 py-3">
+                            <span class="text-gray-300 text-lg">Monthly Fixed Fee</span>
+                            <span class="font-bold text-white text-xl">Free (0%)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/10 py-3">
+                            <span class="text-gray-300 text-lg">Withdrawal Fee</span>
+                            <span class="font-bold text-white text-xl">Free or 5 USD</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="text-gray-300 text-lg">Performance Fee</span>
+                            <span class="font-bold text-primary text-xl">10% - 50%</span>
+                        </div>
+                        <p class="text-sm text-gray-500 text-right">*No fees are charged during a loss.</p>
+                    </div>
+
+                    <!-- Revenue Model Example -->
+                    <div class="mt-8 bg-dark/50 border border-primary/30 rounded-xl p-6">
+                        <h4 class="text-white font-bold mb-4 flex items-center"><i class="fa-solid fa-calculator text-primary mr-2"></i> Revenue Model (Simulation)</h4>
+                        <div class="space-y-2 text-sm text-gray-300">
+                            <div class="flex justify-between border-b border-white/5 pb-2"><span>Assumed AUM</span><span class="font-mono text-white">$1,000,000</span></div>
+                            <div class="flex justify-between border-b border-white/5 py-2"><span>Assumed Monthly Return</span><span class="font-mono text-white">+5%</span></div>
+                            <div class="flex justify-between border-b border-white/5 py-2"><span>Gross Profit</span><span class="font-mono text-white">$50,000</span></div>
+                            <div class="flex justify-between py-2"><span>Performance Fee (e.g., 10%)</span><span class="font-mono text-primary">-$5,000</span></div>
+                            <div class="flex justify-between pt-2 border-t border-white/20 mt-2 font-bold">
+                                <span class="text-white">Net User Profit</span><span class="font-mono text-green-400 text-lg">+$45,000 / mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl text-center border border-primary/30 shadow-[0_0_30px_rgba(0,242,254,0.1)]">
+                    <i class="fa-solid fa-link text-5xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-white">"Don't trust,<br>verify on the blockchain."</h3>
+                    <p class="text-gray-400 mb-8">
+                        The Vault addresses managed by AlphaCoreX are completely public.<br>
+                        Verify all current positions, trade history, cumulative PnL, and your personal share and profit in real-time, anytime.
+                    </p>
+                    <a href="#" class="inline-block bg-white text-dark font-bold py-3 px-6 rounded-full hover:bg-gray-200 transition-colors">
+                        View Vault Address
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="bg-gray-950 border-t border-white/5 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-white">Next-Gen Asset Management. Today.</h2>
+            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
+                A completely new Bucket Vault copy trading experience combining cutting-edge AI with on-chain technology.
+            </p>
+            <a href="#" class="inline-block bg-gradient-to-r from-primary to-secondary text-dark font-bold py-4 px-10 rounded-full text-xl hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,242,254,0.5)]">
+                Start with AlphaCoreX
+            </a>
+
+            <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm">
+                <p>&copy; 2026 AlphaCoreX. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Terms</a>
+                    <a href="#" class="hover:text-primary transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-twitter text-lg"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-discord text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
